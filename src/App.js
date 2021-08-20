@@ -1,25 +1,74 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React,{Component} from 'react';
+import NavBar  from "./Component/NavBar/Navbar.component";
+import Reset from "./Component/Reset/Reset.component"
+import Counters  from "./Component/Counters/Counters.component";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+  state = {
+    counters: [
+      { id: 0, value: 5 },
+      { id: 1, value: 1 },
+      { id: 2, value: 0 },
+      { id: 3, value: 0 },
+      { id: 4, value: 0 },
+      { id: 5, value: 0 },
+    ],
+  };
+
+  handleIncrement = (id) => {
+    const counters = this.state.counters.map((counter, idx) => {
+      if (counter.id === id) return { id: idx, value: counter.value + 1 };
+      return counter;
+    });
+
+    this.setState({ counters: counters });
+  };
+
+  handleDecrement = (id) => {
+    const counters = this.state.counters.map((counter, idx) => {
+      if (counter.id === id) return { id: idx, value: counter.value - 1 };
+      return counter;
+    });
+
+    this.setState({ counters: counters });
+  };
+
+  handleReset = () => {
+    this.setState({ counters: [
+      { id: 0, value: 5 },
+      { id: 1, value: 1 },
+      { id: 2, value: 0 },
+      { id: 3, value: 0 },
+      { id: 4, value: 0 },
+      { id: 5, value: 0 },
+    ] });
+  };
+
+  getNonZeroItems = () => {
+    let count = 0;
+    this.state.counters.forEach((counter) => {
+      if (counter.value > 0) return count++;
+    });
+    return count;
+  };
+
+  handleDelete = (id) => {
+    const counters = this.state.counters.filter((counter) => counter.id !== id);
+    this.setState({ counters: counters });
+  };
+  render() {
+    return (
+      <>
+        <NavBar nonZeroItems={this.getNonZeroItems()} />
+        <Reset onReset={this.handleReset} />
+        <Counters
+          counters={this.state.counters}
+          onIncrement={this.handleIncrement}
+          onDecrement={this.handleDecrement}
+          onDelete={this.handleDelete}
+        />
+      </>
+    );
+  }
 }
-
-export default App;
