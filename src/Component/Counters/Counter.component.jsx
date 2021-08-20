@@ -6,7 +6,7 @@ const Counter = (props) => {
       <ul className="mt-3 ">
         <li className="list-unstyled">
           <div className="container">
-            <Button varient="primary" style={{marginRight:"20px"}}> {props.value} </Button>
+            <Button varient="primary" style={{marginRight:"20px"}}> {props.value>0?props.value:'Zero'} </Button>
             <Button
               variant="secondary"
               onClick={() => props.onIncrement(props.id)}
