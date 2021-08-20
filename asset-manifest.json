@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/count-zero_state/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/count-zero_state/static/js/main.1741b466.chunk.js",
+    "main.js.map": "/count-zero_state/static/js/main.1741b466.chunk.js.map",
+    "runtime-main.js": "/count-zero_state/static/js/runtime-main.41cd0983.js",
+    "runtime-main.js.map": "/count-zero_state/static/js/runtime-main.41cd0983.js.map",
+    "static/css/2.c490997a.chunk.css": "/count-zero_state/static/css/2.c490997a.chunk.css",
+    "static/js/2.af41bc1e.chunk.js": "/count-zero_state/static/js/2.af41bc1e.chunk.js",
+    "static/js/2.af41bc1e.chunk.js.map": "/count-zero_state/static/js/2.af41bc1e.chunk.js.map",
+    "static/js/3.b962c6e2.chunk.js": "/count-zero_state/static/js/3.b962c6e2.chunk.js",
+    "static/js/3.b962c6e2.chunk.js.map": "/count-zero_state/static/js/3.b962c6e2.chunk.js.map",
+    "index.html": "/count-zero_state/index.html",
+    "static/css/2.c490997a.chunk.css.map": "/count-zero_state/static/css/2.c490997a.chunk.css.map",
+    "static/css/main.8c8b27cf.chunk.css.map": "/count-zero_state/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.af41bc1e.chunk.js.LICENSE.txt": "/count-zero_state/static/js/2.af41bc1e.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.41cd0983.js",
+    "static/css/2.c490997a.chunk.css",
+    "static/js/2.af41bc1e.chunk.js",
+    "static/css/main.8c8b27cf.chunk.css",
+    "static/js/main.1741b466.chunk.js"
+  ]
+}
